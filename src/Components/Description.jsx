@@ -28,7 +28,7 @@ export default function Description() {
                         <Cursor />
                     </h2>
                     <p className="text-lg mb-5" data-aos="fade-right">I make the complex simple</p>
-                    <Link href="#contact" data-aos="fade-right">
+                    <Link href="https://www.linkedin.com/in/silvia-jaimes-c" target="_blank" data-aos="fade-right">
                         <Button className="bg-violet-400 rounded-none text-lg p-4 text-white">
                             Contact me
                         </Button>

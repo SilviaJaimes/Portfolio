@@ -45,43 +45,6 @@ export default function NavbarMenuPrin() {
                     </NavbarItem>
                 </NavbarBrand>
             </NavbarContent>
-            <NavbarContent justify="end">
-                <NavbarItem className="hidden lg:flex">
-                    <Dropdown className="bg-zinc-900">
-                        <DropdownTrigger>
-                            <Button
-                                disableRipple
-                                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white text-large"
-                                endContent={<ion-icon name="chevron-down-outline"></ion-icon>}
-                                radius="sm"
-                                variant="light"
-                            >
-                                {selectedValue}
-                            </Button>
-                        </DropdownTrigger>
-                        <DropdownMenu
-                            aria-label="Single selection example"
-                            disallowEmptySelection
-                            selectionMode="single"
-                            selectedKeys={selectedKeys}
-                            onSelectionChange={setSelectedKeys}
-                        >
-                            {itemsMenu.map((item) => (
-                                <DropdownItem key={item.description}>
-                                    <Link href={item.href} className="text-white hover:text-black">
-                                        {item.description}
-                                    </Link>
-                                </DropdownItem>
-                            ))}
-                        </DropdownMenu>
-                    </Dropdown>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link href="#contact" className="text-white text-large">
-                        Contact
-                    </Link>
-                </NavbarItem>
-            </NavbarContent>
 
             <NavbarMenu>
                 {itemsMenu.map((item, index) => (
@@ -89,7 +52,7 @@ export default function NavbarMenuPrin() {
                         <Link
                             color={"foreground"}
                             className="w-full"
-                            href={item.href}
+                            to={item.href}
                             size="lg"
                         >
                             {item.description}
